@@ -1,5 +1,3 @@
-price = float(input())
-decimal_part = round(price % 1, 2) * 100
-print(decimal_part > 50)
-
-print(round(44.50))
+num = float(input("num: "))
+answer = bool(0 <= num <= 2 or 10 <= num <= 20)
+print(answer)
