@@ -1,3 +1,5 @@
-num = float(input("num: "))
-answer = bool(0 <= num <= 2 or 10 <= num <= 20)
-print(answer)
+# var_1, var_2 = map(str.strip, input().split())
+string_01 = input()
+# string_02 = input()
+
+print(string_01[:5][::-1])
