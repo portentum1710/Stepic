@@ -1,2 +1,4 @@
-rate = float(input())
-rs = int(input())
+marks = list(map(str, input().split()))
+marks.sort()
+marks.remove()
+print(*marks)
