@@ -1,4 +1,4 @@
-marks = list(map(str, input().split()))
-marks.sort()
-marks.remove()
-print(*marks)
+weight = float(input())
+
+
+
