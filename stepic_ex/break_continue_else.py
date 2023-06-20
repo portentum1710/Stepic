@@ -1,13 +1,25 @@
-cities = list(map(str, input().split()))
+import sys
 
-lenth = len(cities)
+# считывание списка из входного потока
+lst_in = list(map(str.strip, sys.stdin.readlines()))
+
+# здесь продолжайте программу (используйте список lst_in)
+
+
+
+length = len(lst_in)
+new_lst = []
 
 i = 0
-while i < lenth:
-    if len(cities[i]) < 5:
-        print("НЕТ")
-        break
+while i < length:
+    if " " not in lst_in[i]:
+        new_lst.append(lst_in[i])
     i += 1
-else:
-    print("ДА")
+
+print(" ".join(new_lst))
+
+
+
+
+
 
