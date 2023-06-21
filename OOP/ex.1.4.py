@@ -1,22 +1,38 @@
-class Point:
-    color = "red"
-    circle = 2
+#             ПОДВИГ 4
+# class MediaPlayer:
+#     def open(self, file):
+#         self.filename = file
+#
+#     def play(self):
+#         print('Воспроизведение', self.filename)
+#
+#
+# media1 = MediaPlayer()
+# media1.open("filemedia1")
+# media1.play()
+#
+# media2 = MediaPlayer()
+# media2.open("filemedia2")
+# media2.play()
+# __________________________________________________________
+#               ПОДВИГ 5
 
-    def set_coords(self, x, y):
-        self.x = x
-        self.y = y
+class Graph:
+    LIMIT_Y = [0, 10]
 
-    def get_coords(self):
-        return self.x, self.y
+    def set_data(self, data):
+        self.data = data
+
+    def draw(self):
+        sort_lst = []
+        for i in self.data:
+            if Graph.LIMIT_Y[0] <= i <= Graph.LIMIT_Y[-1]:
+                sort_lst.append(str(i))
+        print(" ".join(sort_lst))
 
 
-pt = Point()
-pt.set_coords(1, 2)
-print(pt.__dict__)
-print(pt.get_coords())
+graph_1 = Graph()
+graph_1.set_data([10, -5, 100, 20, 0, 80, 45, 2, 5, 7])
+graph_1.draw()
 
-f = getattr(pt, 'get_coords')
-print(f())
-# pt1 = Point()
-# pt1.set_coords(10, 20)
-# print(pt1.__dict__)
+
