@@ -1,8 +1,9 @@
-string = input()
+# string = input()
+#
+# flag = ""
+# for idx, s in enumerate(string):
+#     if s != "р" and string[idx + 1] != "а":
 
-flag = ""
-for idx, s in enumerate(string):
-    if s != "р" and string[idx + 1] != "а":
 
 
 # if not flag:
