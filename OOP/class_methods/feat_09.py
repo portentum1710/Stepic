@@ -15,21 +15,15 @@ class DataBase:
             for idx, key in enumerate(DataBase.FIELDS):
                 dct[key] = item_ls[idx]
             self.lst_data.append(dct)
-# вариант автора
-#    def insert(self, data):
-#         for x in data:
-#             self.lst_data.append(dict(zip(self.FIELDS, x.split())))
 
     def select(self, a, b):
-        if len(self.lst_data) > b:
+        if len(self.lst_data) < b:
             b = len(self.lst_data)
-
-
+        return self.lst_data[a:b]
 
 
 db = DataBase()
 db.insert(lst_in)
-print(db.lst_data)
 
 # FIELDS = ('id', 'name', 'old', 'salary')
 # ls = ["1 Сергей 35 120000", "2 Федор 23 12000", "3 Иван 13 1200"]
@@ -43,5 +37,3 @@ print(db.lst_data)
 #     new_ls.append(dct)
 #
 # print(new_ls)
-
-
