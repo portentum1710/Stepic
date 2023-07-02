@@ -4,11 +4,27 @@ class Translator:
             self.tr = {}
 
         self.tr.setdefault(eng, [])
-        # здесь продолжайте метод add
+        if rus not in self.tr[eng]:
+            self.tr[eng].append(rus)
 
     def remove(self, eng):
-        # здесь продолжайте метод remove
+        self.tr.pop(eng, False)
 
     def translate(self, eng):
-        # здесь продолжайте метод translate
+        return self.tr[eng]
 
+
+tr = Translator()
+tr.add("tree", "дерево")
+tr.add("car", "машина")
+tr.add("car ", "автомобиль")
+tr.add("leaf ", "лист")
+tr.add("river ", "река")
+tr.add("go", "идти")
+tr.add("go", "ехать")
+tr.add("go", "ходить")
+tr.add("milk ", "молоко")
+
+tr.remove("car")
+print(*tr.translate("go"))
+print(Translator.__dict__)
