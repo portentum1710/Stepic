@@ -5,10 +5,6 @@ class Point:
         self.color = color
 
 
-points = []
+points = [Point(i + 1, i + 2) for i in range(0, 1000, 2)]
+points[1].color = "yellow"
 
-i = 1
-
-while i < 3:
-
-    i += 1
