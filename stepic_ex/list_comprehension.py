@@ -1,4 +1,4 @@
-N = 4
+lst_01 = input().split()
+lst_02 = input().split()
 
-lst = [[0 for y in range(N)] for x in range(N)]
-print(lst)
+lst_03 = [x ]
